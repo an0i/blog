@@ -9,3 +9,10 @@ body, html, #___gatsby, #gatsby-focus-wrapper {
 main {
   min-height: calc(100vh - 6rem);
 }
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color: white;
+    background-color: #222222;
+  }
+}
