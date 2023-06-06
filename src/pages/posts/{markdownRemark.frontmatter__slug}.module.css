@@ -109,6 +109,7 @@
 
 .mdStyle li {
     margin-bottom: 0.4em;
+    overflow-x: scroll;
 }
 
 .mdStyle blockquote {
@@ -380,6 +381,7 @@
 
     .mdStyle li {
         margin-bottom: 0.4em;
+        overflow-x: scroll;
     }
 
     .mdStyle blockquote {
