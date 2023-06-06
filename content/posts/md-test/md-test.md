@@ -2,6 +2,7 @@
 title: MD测试
 slug: md-test
 date: 2023-05-21
+toc: true
 ---
 
 简单测试一下markdown

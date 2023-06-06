@@ -1,0 +1,17 @@
+.tocStyle {
+    white-space: nowrap;
+}
+
+.tocStyle li {
+    overflow-x: hidden;
+    max-width: 12.5rem;
+}
+
+.tocStyle a {
+    color: #1d7484;
+}
+
+.tocStyle a:hover {
+    text-decoration: underline;
+    color: #982c61;
+}

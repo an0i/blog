@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import PostCard from './utils/post-card';
 
-export default function PostCardList({ limit }) {
+export default function PostCardList() {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
@@ -23,15 +23,8 @@ export default function PostCardList({ limit }) {
       }
     }
   `);
-  if (limit) {
-    return (
-      <div>
-        {data.allMarkdownRemark.nodes.slice(0, limit).map((node) => <PostCard key={node.id} postHeroData={node.frontmatter.hero?.childImageSharp.gatsbyImageData} postSlug={node.frontmatter.slug} postTitle={node.frontmatter.title} postDate={node.frontmatter.date} postExcerpt={node.excerpt} />)}
-      </div>
-    );
-  }
   return (
-    <div>
+    <div className="space-y-4">
       {data.allMarkdownRemark.nodes.map((node) => <PostCard key={node.id} postHeroData={node.frontmatter.hero?.childImageSharp.gatsbyImageData} postSlug={node.frontmatter.slug} postTitle={node.frontmatter.title} postDate={node.frontmatter.date} postExcerpt={node.excerpt} />)}
     </div>
   );
